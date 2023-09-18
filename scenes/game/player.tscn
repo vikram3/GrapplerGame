@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://dn773vfmv0mgt"]
+
+[ext_resource type="Script" path="res://src/Player.gd" id="1_3efs6"]
+[ext_resource type="Texture2D" uid="uid://df6aewk8t27nk" path="res://icon.svg" id="2_v7fwm"]
+[ext_resource type="PackedScene" uid="uid://duxfla6q8o1jh" path="res://scenes/game/Grapple.tscn" id="3_aebbm"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kjb7m"]
+
+[node name="Player" type="CharacterBody2D"]
+position = Vector2(17, -52)
+collision_layer = 2
+script = ExtResource("1_3efs6")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1, 5)
+zoom = Vector2(1.5, 1.5)
+process_callback = 0
+limit_bottom = 0
+limit_smoothed = true
+position_smoothing_enabled = true
+editor_draw_limits = true
+editor_draw_drag_margin = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.165, 0.165)
+texture = ExtResource("2_v7fwm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_kjb7m")
+
+[node name="Grapple" parent="." instance=ExtResource("3_aebbm")]
