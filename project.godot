@@ -10,14 +10,15 @@ config_version=5
 
 [application]
 
-config/name="GrapllerGame"
+config/name="GrapplerGame"
 run/main_scene="res://scenes/main.tscn"
 config/features=PackedStringArray("4.1", "Mobile")
 config/icon="res://icon.svg"
 
 [display]
 
-window/size/resizable=false
+window/size/viewport_width=1920
+window/size/viewport_height=1080
 
 [input]
 

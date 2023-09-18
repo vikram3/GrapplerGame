@@ -10,6 +10,7 @@
 position = Vector2(17, -52)
 collision_layer = 2
 script = ExtResource("1_3efs6")
+metadata/_edit_horizontal_guides_ = [-278.0]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(1, 5)

@@ -7,7 +7,7 @@ var tip := Vector2(0, 0)
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
-const SPEED = 1500
+const SPEED = 1250
 const AIR_FRICTION = 0.05
 const MAXTIME = 1.0
 
